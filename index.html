@@ -19,9 +19,9 @@
         <div class="col-12 col-sm-10 col-md-5 bg-light text-center pt-5 pb-4">
           <h1 class="mb-5" id="get-number2">0</h1>
           <button id="add-one-1" class="add-btn">Add One</button>
-          <button class="save-btn ms-2">Save</button>
+          <button class="save-btn ms-2" id="save-btn">Save</button>
           <p class="mt-4 pt-2 opacity-50 text-black">Previous values</p>
-          <p class="text-black">10, 20, 15</p>
+          <div id="list-element"></div>
         </div>
       </div>
     </div>
@@ -74,18 +74,29 @@
     // HERE WE GET ELEMENT  \
     const getnumber = document.getElementById("get-number2");
     const addOneButton = document.getElementById("add-one-1");
+    const getSaveButton = document.getElementById("save-btn");
+    const listelement = document.getElementById("list-element");
+
+    console.log(getnumber, "getnumber")
     //    DECLARE VARIABLE AND ASIGNED
-    let count;
-    console.log(count);
-    count = 0;
-    console.log(count);
+
+    const array = [];
+    let count = 0;
     //   CLICK ON BUTTON ADD ONE
     addOneButton.addEventListener("click", function () {
       count = count + 1;
       getnumber.innerHTML = count;
-      console.log("Clicked", count);
-      console.log(getnumber.innerHTML);
     });
+
+    getSaveButton.addEventListener("click", function () {
+      array.push(count);
+      count = 0
+      getnumber.innerHTML = count;
+      console.log(array)
+      listelement.innerHTML = '<ul>' + array.map(function (item) {
+        return '<li>' + item + '</li>';
+      }).join('');
+    }) + '</ul>'
   </script>
 </body>
 
