@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/style/style.css" />
+  <title>Counting</title>
+</head>
+
+<body>
+  <section class="h-100vh d-flex flex-column justify-content-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-5 bg-light text-center pt-5 pb-4">
+          <h1 class="mb-5" id="get-number2">0</h1>
+          <button id="add-one-1" class="add-btn">Add One</button>
+          <button class="save-btn ms-2">Save</button>
+          <p class="mt-4 pt-2 opacity-50 text-black">Previous values</p>
+          <p class="text-black">10, 20, 15</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="h-100vh d-flex flex-column justify-content-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Simple Calculator</h2>
+        </div>
+        <div class="col-6 p-4">
+          <div class="p-3">
+            <p class="text-black opacity-50 mb-2 pb-1">2 + 5</p>
+            <h2 class="mb-0">7</h2>
+          </div>
+          <div class="p-3 mt-2">
+            <p class="m-1 text-gray">Enter first value</p>
+          </div>
+          <div class="p-3 mt-2 mb-3">
+            <p class="m-1 text-gray">Enter second value</p>
+          </div>
+          <div class="d-flex justify-content-between border-0">
+            <div class="box p-4 mt-4">
+              <p class="px-3 mb-0 text-blue"> +</p>
+            </div>
+            <div class="box p-4 mt-4">
+              <p class="px-3 mb-0 text-blue"> -</p>
+            </div>
+            <div class="box p-4 mt-4">
+              <p class="px-3 mb-0 text-blue"> *</p>
+            </div>
+            <div class="box p-4 mt-4">
+              <p class="px-3 mb-0 text-blue"> /</p>
+            </div>
+            <button class="clear-btn">Clear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <script>
+    // HERE WE GET ELEMENT  \
+    const getnumber = document.getElementById("get-number2");
+    const addOneButton = document.getElementById("add-one-1");
+    //    DECLARE VARIABLE AND ASIGNED
+    let count;
+    console.log(count);
+    count = 0;
+    console.log(count);
+    //   CLICK ON BUTTON ADD ONE
+    addOneButton.addEventListener("click", function () {
+      count = count + 1;
+      getnumber.innerHTML = count;
+      console.log("Clicked", count);
+      console.log(getnumber.innerHTML);
+    });
+  </script>
+</body>
+
+</html>
