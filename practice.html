@@ -1,125 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/style/style.css" />
-    <title>Advance Counter</title>
-  </head>
 
-  <body>
-    <section class="h-100vh d-flex flex-column justify-content-center">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-12">
-            <h2 class="opacity-50">Simple Calculator</h2>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="parent-box p-4">
-              <div class="p-3 border-1-white br-4">
-                <!-- <p class="text-black opacity-50 mb-2 pb-1">2 + 5</p> -->
-                <h2 id="answer" class="mb-0">0</h2>
-              </div>
-              <input
-                class="text-gray p-3 mt-2"
-                type="number"
-                placeholder="Enter first value"
-                id="first_input"
-              />
-              <input
-                class="text-gray p-3 mt-2 mb-3"
-                type="number"
-                placeholder="Enter second value"
-                id="second_input"
-              />
-              <div
-                class="d-flex justify-content-between align-items-center flex-wrap border-0"
-              >
-                <button
-                  class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue"
-                  id="plus_btn"
-                >
-                  +
-                </button>
-                <button
-                  class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue"
-                  id="minus_btn"
-                >
-                  -
-                </button>
-                <button
-                  class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue"
-                  id="multiply_btn"
-                >
-                  *
-                </button>
-                <button
-                  class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue"
-                  id="devide_btn"
-                >
-                  /
-                </button>
-                <div class="border-0 mt-4">
-                  <button class="clear-btn" id="clear">Clear</button>
-                </div>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/style/style.css" />
+  <title>Advance Counter</title>
+</head>
+
+<body>
+  <section class="h-100vh d-flex flex-column justify-content-center">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-12">
+          <h2 class="opacity-50">Simple Calculator</h2>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="parent-box p-4">
+            <div class="p-3 border-1-white br-4">
+              <!-- <p class="text-black opacity-50 mb-2 pb-1">2 + 5</p> -->
+              <h2 id="answer" class="mb-0">0</h2>
+            </div>
+            <input class="text-gray p-3 mt-2" type="number" placeholder="Enter first value" id="first_input" />
+            <input class="text-gray p-3 mt-2 mb-3" type="number" placeholder="Enter second value" id="second_input" />
+            <div class="d-flex justify-content-between align-items-center flex-wrap border-0">
+              <button class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue" id="plus_btn">
+                +
+              </button>
+              <button class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue" id="minus_btn">
+                -
+              </button>
+              <button class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue" id="multiply_btn">
+                *
+              </button>
+              <button class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue" id="devide_btn">
+                /
+              </button>
+              <div class="border-0 mt-4">
+                <button class="clear-btn" id="clear">Clear</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      const answer = document.getElementById("answer");
-      const firstInput = document.getElementById("first_input");
-      const secondInput = document.getElementById("second_input");
-      //===========================================================
-      const plus = document.getElementById("plus_btn");
-      plus.addEventListener("click", function () {
-        const one = Number(firstInput.value);
-        const two = Number(secondInput.value);
-        answer.innerHTML = one + two;
-      });
-      //===========================================================
-      const minus = document.getElementById("minus_btn");
-      minus.addEventListener("click", function () {
-        const one = Number(firstInput.value);
-        const two = Number(secondInput.value);
-        answer.innerHTML = one - two;
-      });
-      //===========================================================
-      const multiply = document.getElementById("multiply_btn");
-      multiply.addEventListener("click", function () {
-        const one = Number(firstInput.value);
-        const two = Number(secondInput.value);
-        answer.innerHTML = one * two;
-      });
-      //===========================================================
-      const devide = document.getElementById("devide_btn");
-      devide.addEventListener("click", function () {
-        const one = Number(firstInput.value);
-        const two = Number(secondInput.value);
-        answer.innerHTML = one / two;
-      });
-      //===========================================================
-      const clear = document.getElementById("clear");
-      clear.addEventListener("click", function () {
-        answer = 0;
-        getnumber.innerHTML = answer;
-      }) + "</ul>";
-    </script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script>
+    let answer = document.getElementById("answer");
+    const firstInput = document.getElementById("first_input");
+    const secondInput = document.getElementById("second_input");
+    //===========================================================
+    const plus = document.getElementById("plus_btn");
+    plus.addEventListener("click", function () {
+      const one = Number(firstInput.value);
+      const two = Number(secondInput.value);
+      answer.innerHTML = one + two;
+    });
+    //===========================================================
+    const minus = document.getElementById("minus_btn");
+    minus.addEventListener("click", function () {
+      const one = Number(firstInput.value);
+      const two = Number(secondInput.value);
+      answer.innerHTML = one - two;
+    });
+    //===========================================================
+    const multiply = document.getElementById("multiply_btn");
+    multiply.addEventListener("click", function () {
+      const one = Number(firstInput.value);
+      const two = Number(secondInput.value);
+      answer.innerHTML = one * two;
+    });
+    //===========================================================
+    const devide = document.getElementById("devide_btn");
+    devide.addEventListener("click", function () {
+      const one = Number(firstInput.value);
+      const two = Number(secondInput.value);
+      answer.innerHTML = one / two;
+    });
+    //===========================================================
+    const clear = document.getElementById("clear");
+    clear.addEventListener("click", function () {
+      answer.innerHTML = 0;
+      firstInput.value = ""
+      secondInput.value = ""
+    });
+  </script>
+</body>
+
 </html>
