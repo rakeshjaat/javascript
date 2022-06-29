@@ -17,8 +17,9 @@
         <div class="container">
             <h1 class="text-center mb-5">Advance Calculator</h1>
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-10 col-md-5 bg-light  pt-5 pb-4">
-                    <h1 class="mb-5 ps-5" id="get-number2">0</h1>
+                <div class="col-6 bg-light  pt-5 pb-4">
+                    <h1 class="mb-5 ps-5" id="get-number2"></h1>
+                    <!-- <input id="get-number2" type="text"> -->
                     <div class="text-center">
                         <div class="d-flex justify-content-between align-items-center">
                             <button id="add-seven" class="add-btn">7</button>
@@ -55,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="w-19">
-                                <button id="add-equlto" class=" w-100 h-100   add-btn">=</button>
+                                <button id="add-equlto" class="w-100 h-100 add-btn">=</button>
                             </div>
                         </div>
 
@@ -78,6 +79,29 @@
         const addseven = document.getElementById("add-seven");
         const addeight = document.getElementById("add-eight");
         const addnine = document.getElementById("add-nine");
+        const addplus = document.getElementById("add-plus");
+        const addup = document.getElementById("add-up");
+        const addcancle = document.getElementById("add-cancle");
+        const addequlto = document.getElementById("add-equlto");
+
+        const result = document.getElementById("get-number2");
+
+        addeight.addEventListener("click", function () {
+            result.innerHTML += 8;
+        });
+
+        addseven.addEventListener("click", function () {
+            result.innerHTML += 7;
+        });
+
+        addplus.addEventListener("click", function () {
+            result.innerHTML += "+";
+        });
+
+        addequlto.addEventListener("click", function () {
+            console.log(result, "result")
+            result.innerHTML = eval(result.innerHTML);
+        });
     </script>
 </body>
 
