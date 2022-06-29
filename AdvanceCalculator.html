@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>Advance Calculator</title>
+</head>
+
+<body>
+    <section class="h-100vh d-flex flex-column justify-content-center">
+        <div class="container">
+            <h1 class="text-center mb-5">Advance Calculator</h1>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-5 bg-light  pt-5 pb-4">
+                    <h1 class="mb-5 ps-5" id="get-number2">0</h1>
+                    <div class="text-center">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button id="add-seven" class="add-btn">7</button>
+                            <button id="add-eight" class="add-btn">8</button>
+                            <button id="add-nine" class="add-btn">9</button>
+                            <button id="add-plus" class="add-btn">+</button>
+                            <button id="add-up" class="add-btn"><img src="./assets/style/images/^.png" alt=""></button>
+                            <button id="add-cancle" class="add-btn"><img src="./assets/style/images/Group 1.png"
+                                    alt=""></button>
+                        </div>
+                        <div class="my-1 d-flex justify-content-between align-items-center">
+                            <button id="add-for" class="add-btn">4</button>
+                            <button id="add-five" class="add-btn">5</button>
+                            <button id="add-six" class="add-btn">6</button>
+                            <button id="add-minus" class="add-btn">-</button>
+                            <button id="add-onemultiply" class="add-btn">1/*</button>
+                            <button id="add-clear" class="add-btn">c</button>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <div class=" ">
+                                    <button id="add-one" class="add-btn">1</button>
+                                    <button id="add-two" class="add-btn">2</button>
+                                    <button id="add-three" class="add-btn">3</button>
+                                    <button id="add-multiply" class="add-btn">*</button>
+                                    <button id="add-persenteg" class="add-btn">%</button>
+                                </div>
+                                <div class="mt-1  ">
+                                    <button id="add-doublezero" class="add-btn">00</button>
+                                    <button id="add-zero" class="add-btn">0</button>
+                                    <button id="add-point" class="add-btn">.</button>
+                                    <button id="add-divide" class="add-btn">/</button>
+                                    <button id="add-exlamation" class="add-btn">!</button>
+                                </div>
+                            </div>
+                            <div class="w-19">
+                                <button id="add-equlto" class=" w-100 h-100   add-btn">=</button>
+                            </div>
+                        </div>
+
+
+                        <p class="mt-4 pt-2 opacity-50 text-black">Previous values</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <script>
+        // HERE WE GET ELEMENT  \
+        const addseven = document.getElementById("add-seven");
+        const addeight = document.getElementById("add-eight");
+        const addnine = document.getElementById("add-nine");
+    </script>
+</body>
+
+</html>

@@ -116,3 +116,7 @@ input:focus-visible {
   font-weight: 600;
   border: none;
 }
+
+.w-19 {
+  width: 19%;
+}
