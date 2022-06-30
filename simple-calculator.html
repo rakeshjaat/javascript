@@ -15,53 +15,85 @@
     <title>Advance Counter</title>
   </head>
 
-  <body>
-    <section class="h-100vh d-flex flex-column justify-content-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h2 class="opacity-50">Simple Calculator</h2>
-          </div>
-          <div class="col-6">
-            <div class="parent-box p-4">
-              <div class="p-3 border-1-white br-4">
-                <p class="text-black opacity-50 mb-2 pb-1">2 + 5</p>
-                <h2 class="mb-0">7</h2>
-              </div>
-              <input
-                class="text-gray p-3 mt-2"
-                type="text"
-                placeholder="Enter first value"
-              />
-              <input
-                class="text-gray p-3 mt-2 mb-3"
-                type="text"
-                placeholder="Enter second value"
-              />
-              <div
-                class="d-flex justify-content-between align-items-center border-0"
-              >
-                <button class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue">
-                  +
-                </button>
-                <button class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue">
-                  -
-                </button>
-                <button class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue">
-                  *
-                </button>
-                <button class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue">
-                  /
-                </button>
-                <div class="border-0 mt-4">
-                  <button class="clear-btn">Clear</button>
-                </div>
+<head>
+  <!-- <!s-- Required meta tags --> -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/style/style.css" />
+  <title>Advance Counter</title>
+</head>
+
+<body>
+  <section class="h-100vh d-flex flex-column justify-content-center">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-12 col-lg-6">
+          <h2 class="opacity-50">Simple Calculator</h2>
+          <div class="parent-box p-4">
+            <div class="p-3 border-1-white br-4">
+              <p class="text-black opacity-50 mb-2 pb-1"> </p>
+              <h2 class="mb-0" id="answer">Answer</h2>
+            </div>
+            <input id="first-value" class="text-gray p-3 mt-2" type="number" value="" placeholder="Enter first value" />
+            <input id="second-value" class="text-gray p-3 mt-2 mb-3" type="number" value=""
+              placeholder="Enter second value" />
+            <div class="d-flex justify-content-between align-items-center border-0">
+              <button id="plus-btn" class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue">+</button>
+              <button id="minus-btn" class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue">-</button>
+              <button id="multiply-btn" class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue">*</button>
+              <button id="divide-btn" class="box py-2 mt-4 br-4 px-4 mx-1 my-1 text-blue">/</button>
+              <div class="border-0 mt-4">
+                <button id="clear-btn" class="clear-btn">Clear</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <script>
+    // VARIABLE  DECLARATION 
+    const firstValue = document.getElementById("first-value");
+    const secondValue = document.getElementById("second-value");
+    const plusbtn = document.getElementById("plus-btn");
+    const minusbtn = document.getElementById("minus-btn");
+    const multiplybtn = document.getElementById("multiply-btn");
+    const dividebtn = document.getElementById("divide-btn");
+    const clearbtn = document.getElementById("clear-btn");
+    const answer = document.getElementById("answer");
+    let inputValueOfFirst;
+    let inputValueOfSecond;
+
+    // GET FIRST VALUE OF INPUT 
+    firstValue.addEventListener("change", function () {
+      inputValueOfFirst = Number(firstValue.value);
+    })
+
+    secondValue.addEventListener("change", function () {
+      inputValueOfSecond = Number(secondValue.value);
+    });
+
+    plusbtn.addEventListener("click", function () {
+      const addnumber = inputValueOfFirst + inputValueOfSecond;
+      answer.innerHTML = addnumber;
+    });
+    clearbtn.addEventListener("click", function () {
+
+      answer.innerHTML = "Answer";
+    });
+  </script>
+</body>
 
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
