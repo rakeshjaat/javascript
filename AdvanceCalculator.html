@@ -59,9 +59,6 @@
                                 <button id="add-equlto" class="w-100 h-100 add-btn">=</button>
                             </div>
                         </div>
-
-
-                        <p class="mt-4 pt-2 opacity-50 text-black">Previous values</p>
                     </div>
                 </div>
             </div>
@@ -79,12 +76,26 @@
         const addseven = document.getElementById("add-seven");
         const addeight = document.getElementById("add-eight");
         const addnine = document.getElementById("add-nine");
+        const addfor = document.getElementById("add-for");
+        const addfive = document.getElementById("add-five");
+        const addsix = document.getElementById("add-six");
+        const addone = document.getElementById("add-one");
+        const addtwo = document.getElementById("add-two");
+        const addthree = document.getElementById("add-three");
         const addplus = document.getElementById("add-plus");
+        const addminus = document.getElementById("add-minus");
+        const addpersenteg = document.getElementById("add-persenteg");
+        const adddoublezero = document.getElementById("add-doublezero");
+        const addpoint = document.getElementById("add-point");
+        const addzero = document.getElementById("add-zero");
+        const adddivide = document.getElementById("add-divide");
+        const addexlamation = document.getElementById("add-exlamation");
         const addup = document.getElementById("add-up");
         const addcancle = document.getElementById("add-cancle");
-        const addequlto = document.getElementById("add-equlto");
-
+        const addmultiply = document.getElementById("add-multiply");
         const result = document.getElementById("get-number2");
+        const addequlto = document.getElementById("add-equlto");
+        const addclear = document.getElementById("add-clear");
 
         addeight.addEventListener("click", function () {
             result.innerHTML += 8;
@@ -93,13 +104,68 @@
         addseven.addEventListener("click", function () {
             result.innerHTML += 7;
         });
+        addnine.addEventListener("click", function () {
+            result.innerHTML += 9;
+        });
+        addfor.addEventListener("click", function () {
+            result.innerHTML += 4;
+        });
+        addthree.addEventListener("click", function () {
+            result.innerHTML += 3;
+        });
+        addtwo.addEventListener("click", function () {
+            result.innerHTML += 2;
+        });
+        addone.addEventListener("click", function () {
+            result.innerHTML += 1;
+        });
+        addfive.addEventListener("click", function () {
+            result.innerHTML += 5;
+        });
+        addsix.addEventListener("click", function () {
+            result.innerHTML += 6;
+        });
+        adddoublezero.addEventListener("click", function () {
+            result.innerHTML += 00;
+        });
+        addzero.addEventListener("click", function () {
+            result.innerHTML += 0;
+        });
 
+        // MATHS SIGHNS===========================================
         addplus.addEventListener("click", function () {
             result.innerHTML += "+";
         });
 
+        addminus.addEventListener("click", function () {
+            console.log(addminus, "addminus")
+            result.innerHTML += "-";
+        });
+        addmultiply.addEventListener("click", function () {
+            result.innerHTML += "*";
+        });
+        addpersenteg.addEventListener("click", function () {
+            result.innerHTML += "%";
+        });
+        addexlamation.addEventListener("click", function () {
+            result.innerHTML += "!";
+        });
+        adddivide.addEventListener("click", function () {
+            result.innerHTML += "/";
+        });
+        addpoint.addEventListener("click", function () {
+            result.innerHTML += ".";
+        });
+        addclear.addEventListener("click", function () {
+            result.innerHTML = "";
+        });
+        addcancle.addEventListener("click", function () {
+            console.log(addcancle, "addcancle")
+            result.innerHTML = result.innerHTML.slice(0, -1);
+        });
+
         addequlto.addEventListener("click", function () {
-            console.log(result, "result")
+            // console.log(result, "result")
             result.innerHTML = eval(result.innerHTML);
         });
     </script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./js.css" />
+    <title>TEXTEDITOR</title>
+</head>
+
+<body>
+    <section class=" min-vh-100 d-flex flex-column justify-content-center  ">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-lg-6">
+                    <h2 class="opacity-50 text-center">Text Editor</h2>
+                    <div class="counter_box p-4">
+                        <div class="p-3 border-1-white br-4">
+                            <h2 class="mb-0 " id="result">This is sample text.</h2>
+                        </div>
+                        <div>
+                            <select id="select-color" class="form-select my-2" onchange="changeFontColor (this);"
+                                aria-label="Default select example">
+                                <option value="Select color" selected>Select color</option>
+                                <option class="red" value="red">red</option>
+                                <option class="blue" value="blue">blue</option>
+                                <option class="black" value="black">black</option>
+                            </select>
+
+
+                            <select id="font-size" class="form-select" onchange="changeFontSize (this);"
+                                aria-label="Default select example">
+                                <option value="Select font size" selected>Select font size</option>
+                                <option value="30px">30</option>
+                                <option value="40px">40</option>
+                                <option value="50px">50</option>
+                            </select>
+
+
+                            <select id="select-alignment" onchange="changeFontStyle (this);" class="form-select my-2"
+                                aria-label="Default select example">
+                                <option selected>Select alignment</option>
+                                <option value="center">text-center</option>
+                                <option value="left">text-start</option>
+                                <option value="right">text-end</option>
+                            </select>
+
+
+                            <select id="font-family" class="form-select" aria-label="Default select example">
+                                <option selected>Select font family</option>
+                                <option class="poppins" value="1">poppins</option>
+                                <option class="montserat" value="2">montserat</option>
+                                <option class="roboto" value="3">roboto</option>
+                            </select>
+
+
+                            <select id="text-decoration" class="form-select my-2" aria-label="Default select example">
+                                <option selected>Select text decoration</option>
+                                <option class="text-decoration-underline" value="1">text-decoration-underline</option>
+                                <option class="text-decoration-overline" value="2">text-decoration-overline</option>
+                                <option class="text-underline-overline-dotted-red" value="3">
+                                    text-underline-overline-dotted-red
+                                </option>
+                            </select>
+
+
+                            <select id="font-weight" class="form-select" aria-label="Default select example">
+                                <option value="Select font weight" selected>Select font weight</option>
+                                <option class=" fw-600" value="1">600</option>
+                                <option class="fw-700 " value="2">700</option>
+                                <option class="fw-800 " value="3">800 </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <script>
+    </script>
+    <script>
+        var changeFontColor = function (font) {
+            document.getElementById(
+                "result").style.color = font.value;
+        }
+        // FUNCTION ON CHANGE COLOR
+        var changeFontSize = function (font) {
+            document.getElementById(
+                "result").style.fontSize = font.value;
+        }
+        // FUNCTION ON CHANGE ALIGNMENT
+        var changeFontStyle = function (alignment) {
+            console.log(alignment.value, "alignment")
+            document.getElementById(
+                "result").style.textAlign = alignment.value;
+        }
+    </script>
+</body>
+
+</html>
