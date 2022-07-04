@@ -45,7 +45,7 @@
                                     <button id="add-two" class="add-btn">2</button>
                                     <button id="add-three" class="add-btn">3</button>
                                     <button id="add-multiply" class="add-btn">*</button>
-                                    <button id="add-persenteg" class="add-btn">%</button>
+                                    <button id="add-percentage" class="add-btn">%</button>
                                 </div>
                                 <div class="mt-1  ">
                                     <button id="add-doublezero" class="add-btn">00</button>
@@ -90,6 +90,7 @@
         const addminus = document.getElementById("add-minus");
         const multiply = document.getElementById("add-multiply");
         const devide = document.getElementById("add-divide");
+        const addpercentage = document.getElementById("add-percentage");
         const addup = document.getElementById("add-up");
         const addcancel = document.getElementById("add-cancel");
         const addequlto = document.getElementById("add-equlto");
@@ -130,6 +131,9 @@
         addone.addEventListener("click", function () {
             result.innerHTML += 1;
         });
+        addpercentage.addEventListener("click", function () {
+            result.innerHTML += "%";
+        });
         multiply.addEventListener("click", function () {
             result.innerHTML += "*";
         });
@@ -151,7 +155,7 @@
 
         addclear.addEventListener("click", function () {
             console.log(result, "result")
-            result.innerHTML = 0;
+            result.innerHTML = '';
         });
 
         addcancel.addEventListener("click", function () {
